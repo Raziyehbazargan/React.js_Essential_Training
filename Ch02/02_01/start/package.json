@@ -1,0 +1,29 @@
+{
+  "name": "React.js_Essential_Training",
+  "version": "1.0.0",
+  "description": "A small react web project - online course for learning React.js Essential concepts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raziyehbazargan/React.js_Essential_Training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raziyehbazargan/React.js_Essential_Training/issues"
+  },
+  "homepage": "https://github.com/Raziyehbazargan/React.js_Essential_Training#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
