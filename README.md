@@ -5,8 +5,6 @@ A small react web project - online course for learning React.js Essential concep
 ### Tools:
   - Google Chrome extension : React detector
   - Google Chrome extension : React developer tools
-
-### Chapter 02: Pure React
   - Install Httpster globally:
   ```
   npm install -g httpster
@@ -15,5 +13,10 @@ A small react web project - online course for learning React.js Essential concep
   - Run the app:
   ```
   httpster -d ./dist -p 3000
-  
+
   ```
+### Chapter 02:
+  - 2-1, 2-2 : Pure React
+  - 2-3 : Using AJX (AJx isn't supported by Browsers. we need to use Babel)
+  - 2-4 : Using Babel inline browser transpiler to transpile Javascript
+  - 2-5 : Using Babel to transpire Javascript
