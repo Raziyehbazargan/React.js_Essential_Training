@@ -2,7 +2,7 @@ import '../stylesheets/ui.scss'
 import Terrain from 'react-icons/lib/md/terrain'
 import SnowFlake from 'react-icons/lib/ti/weather-snow'
 import Calendar from 'react-icons/lib/fa/calendar'
-
+import { PropTypes } from 'react';
 const percentToDecimal = (decimal) => {
 	return ((decimal * 100) + '%')
 }
@@ -46,3 +46,11 @@ export const SkiDayCount = ({total=70, powder=40, backcountry=10, goal=100}) => 
 //   backcountry: 15,
 //   goal: 75
 // }
+
+
+//set  propTypes in ES6 - PropTypes help in debugging
+SkiDayCount.propTypes = {
+  total: PropTypes.number.isRequired,
+  powder: PropTypes.number,
+  backcountry: PropTypes.number
+}

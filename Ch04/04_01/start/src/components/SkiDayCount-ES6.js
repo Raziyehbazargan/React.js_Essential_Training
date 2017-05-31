@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, PropTypes } from 'react'
 import '../stylesheets/ui.scss'
 import Terrain from 'react-icons/lib/md/terrain'
 import SnowFlake from 'react-icons/lib/ti/weather-snow'
@@ -43,9 +43,16 @@ export class SkiDayCount extends Component {
 }
 
 //set default props in ES6
-SkiDayCount.defaultProps = {
-  total : 50,
-  powder: 10,
-  backcountry: 15,
-  goal: 75
+// SkiDayCount.defaultProps = {
+//   total : 50,
+//   powder: 10,
+//   backcountry: 15,
+//   goal: 75
+// }
+
+//set  propTypes in ES6
+SkiDayCount.propTypes = {
+  total: PropTypes.number.isRequired,
+  powder: PropTypes.number,
+  backcountry: PropTypes.number
 }
