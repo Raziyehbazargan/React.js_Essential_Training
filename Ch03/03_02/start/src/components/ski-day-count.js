@@ -1,7 +1,7 @@
 import React from 'react'
 import '../stylesheets/ui.scss'
 
-export const SkiDayCount = React.createClass({
+export class SkiDayCount extends React.Component {
 	render() {
 		return (
 			<div className="ski-day-count">
@@ -17,4 +17,4 @@ export const SkiDayCount = React.createClass({
 			</div>
 		)
 	}
-})
+}
