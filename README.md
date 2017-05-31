@@ -22,3 +22,11 @@ A small react web project - online course for learning React.js Essential concep
   - 2-3 : Using AJX (AJx isn't supported by Browsers. we need to use Babel)
   - 2-4 : Using Babel inline browser transpiler to transpile Javascript - using babel cli
   - 2-5 : Using Webpack(it's an alternative to babel-cli) to handle transpiling process
+  - 2-6 : Using Webpack(it's an alternative to babel-cli) to load json
+  - 2-7 : Using Webpack(it's an alternative to babel-cli) to load CSS
+
+### Chapter 03:
+  - 3-1 Create Components
+  - 3-2 Creating Components
+  - 3-3 Adding Components props
+  - 3-4 Adding Component Methods
