@@ -3,11 +3,10 @@ import { render } from 'react-dom'
 import { SkiDayList } from './components/ski-day-list'
 // import { SkiDayCount } from './components/SkiDayCount-createClass'
 // import { SkiDayCount } from './components/SkiDayCount-ES6'
-import { SkiDayCount } from './components/SkiDayCount'
+//import { SkiDayCount } from './components/SkiDayCount'
+import { App } from './components/app'
 
 window.React = React
-
-
 
 // render(
 // 	<SkiDayCount />,
@@ -15,27 +14,6 @@ window.React = React
 // )
 
 render(
-	<SkiDayList days={
-		[
-			{
-				resort: "Squaw Valley",
-				date: new Date("1/2/2016"),
-				powder: true,
-				backcountry: false
-			},
-			{
-				resort: "Kirkwood",
-				date: new Date("3/2/2016"),
-				powder: false,
-				backcountry: false
-			},
-			{
-				resort: "Mt. Tallac",
-				date: new Date("4/2/2016"),
-				powder: false,
-				backcountry: true
-			}
-		]
-	}/>,
+	<App />,
 	document.getElementById('react-container')
 )
