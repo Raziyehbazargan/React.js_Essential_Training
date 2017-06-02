@@ -1,11 +1,23 @@
 import { PropTypes } from 'prop-types'
 
-export const AddDayForm = ({resort, date, powder, backcountry}) => {
+export const AddDayForm = ({resort, date, powder, backcountry, onNewDay}) => {
 
   let _resort, _date, _powder, _backcountry;
 
   const submit = (e) => {
 		e.preventDefault()
+    onNewDay({
+      resort: _resort.value,
+      date: _date.value,
+      powder: _powder.value,
+      backcountry: _backcountry.value
+    })
+
+    _resort.value = ''
+    _date.value = ''
+    _powder.value = false
+    _backcountry.value = false
+
     console.log('resort', _resort.value)
     console.log('date', _date.value)
     console.log('powder', _powder.value)

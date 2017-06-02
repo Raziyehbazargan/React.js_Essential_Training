@@ -11,7 +11,7 @@ export class App extends Component {
 			allSkiDays: [
 			{
 				resort: "Squaw Valley",
-				date: "1/2/2016",
+				date: "2016-01-02",
 				powder: true,
 				backcountry: false
 			}
@@ -24,7 +24,7 @@ export class App extends Component {
 	addDay(newDay) {
 		this.setState({
 			allSkiDays: [
-				...this.state.allSkiDays,
+				...this.state.allSkiDays,  // ES6: it will push existing value it the array
 				newDay
 			]
 		})
@@ -48,7 +48,7 @@ export class App extends Component {
 							 		"backcountry"
 							 	)}/> :
 			 (this.props.location.pathname === "/add-day") ?
-			 	<AddDayForm /> :
+			 	<AddDayForm onNewDay={this.addDay}/> :
 			 	<SkiDayList days={this.state.allSkiDays}
 			 				filter={this.props.params.filter}/>
 			}
