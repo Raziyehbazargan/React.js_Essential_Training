@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { SkiDayList } from './SkiDayList'
 import { SkiDayCount } from './SkiDayCount'
-import { AddDayForm } from './AddDayForm'
+import { AddDayForm } from './AddDayForm-stateless'
 import { Menu } from './Menu'
 
 export class App extends Component {
