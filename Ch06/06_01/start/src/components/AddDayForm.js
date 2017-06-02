@@ -10,6 +10,8 @@ export class AddDayForm extends Component {
 
 	submit(e) {
 		e.preventDefault()
+
+		 //send data from child to parent
 		console.log('resort', this.refs.resort.value)
 		console.log('resort', this.refs.date.value)
 		console.log('resort', this.refs.powder.checked)
