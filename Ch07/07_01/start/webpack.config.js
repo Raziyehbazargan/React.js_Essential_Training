@@ -8,7 +8,7 @@ module.exports = {
     devServer: {
         inline: true,
         contentBase: './dist',
-        port: 3000
+        port: 5000
     },
     module: {
         loaders: [
