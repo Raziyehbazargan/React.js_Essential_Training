@@ -30,3 +30,10 @@ A small react web project - online course for learning React.js Essential concep
   - 3-2 Creating Components
   - 3-3 Adding Components props
   - 3-4 Adding Component Methods
+  - 3-5 Adding stateless functional Components
+  - 3-6 Adding React Icons
+
+### Chapter 04:
+  - 4-1 Compose Components
+  - 4-2 Child components
+  - 4-3 Default props
