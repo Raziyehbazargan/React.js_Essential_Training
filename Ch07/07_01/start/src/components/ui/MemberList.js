@@ -7,20 +7,39 @@ class MemberList extends Component {
     super(props)
     this.state = {
       members: [],
-      loading: false
+      loading: false,
+      administrators: []
     }
+    this.makeAdmin = this.makeAdmin.bind(this)
+    this.removeAdmin = this.removeAdmin.bind(this)
   }
 
-  componentDidMount() {
-    this.setState({loading: true})
-    fetch('https://api.randomuser.me/?nat=US&results=12')
-    .then(response => response.json())
-    .then(json => json.results)
-    .then(members => this.setState({
-      members, // in ES6 this line equal with => members: members,
-      loading: false
-    }))
-  }
+    componentDidMount() {
+      this.setState({loading: true})
+      fetch('https://api.randomuser.me/?nat=US&results=12')
+      .then(response => response.json())
+      .then(json => json.results)
+      .then(members => this.setState({
+        members, // in ES6 this line equal with => members: members,
+        loading: false
+      }))
+    }
+
+    makeAdmin(email) {
+      const administrators = [
+        ...this.state.administrators,
+        email
+      ]
+      this.setState({administrators})
+    }
+
+    removeAdmin(email) {
+      const administrators = this.state.administrators.filter(
+        adminEmail => adminEmail !== email
+      )
+      this.setState({administrators})
+    }
+
     render() {
       const { members, loading } = this.state;
 
@@ -34,9 +53,14 @@ class MemberList extends Component {
                   members.map(
                     (member, i) =>
                       <Member key={i}
+                              admin={this.state.administrators.some(
+                                adminEmail => adminEmail === member.email
+                              )}
                               name={`${members.name.first}  ${member.name.last}`}
                               email={member.email}
-                              thumbnail={member.picture.thumbnail}/>
+                              thumbnail={member.picture.thumbnail}
+                              makeAdmin={this.makeAdmin}
+                              removeAdmin={this.removeAdmin}/>
                   ):
                   <span> Currently 0 members </span>
               }
